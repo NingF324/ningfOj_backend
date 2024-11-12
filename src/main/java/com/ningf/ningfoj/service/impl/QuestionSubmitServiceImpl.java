@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.ningf.ningfoj.common.ErrorCode;
 import com.ningf.ningfoj.constant.CommonConstant;
 import com.ningf.ningfoj.exception.BusinessException;
+import com.ningf.ningfoj.judge.JudgeService;
 import com.ningf.ningfoj.model.dto.questionsubmit.QuestionSubmitAddRequest;
 import com.ningf.ningfoj.model.dto.questionsubmit.QuestionSubmitQueryRequest;
 import com.ningf.ningfoj.model.entity.Question;
@@ -22,6 +23,7 @@ import com.ningf.ningfoj.service.UserService;
 import com.ningf.ningfoj.utils.SqlUtils;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -29,6 +31,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
 /**
@@ -44,6 +47,10 @@ public class QuestionSubmitServiceImpl extends ServiceImpl<QuestionSubmitMapper,
 
     @Resource
     private UserService userService;
+
+    @Resource
+    @Lazy
+    private JudgeService judgeService;
 
     /**
      * 提交题目
@@ -82,7 +89,11 @@ public class QuestionSubmitServiceImpl extends ServiceImpl<QuestionSubmitMapper,
         if(!result) {
             throw new BusinessException(ErrorCode.SYSTEM_ERROR,"提交插入失败");
         }
-        return questionSubmit.getId();
+        Long questionSubmitId = questionSubmit.getId();
+        CompletableFuture.runAsync(()->{
+            judgeService.doJudge(questionSubmitId);
+        });
+        return questionSubmitId;
     }
 
     @Override

@@ -18,7 +18,7 @@ public class JudgeInfo {
      * */
     private long memoryLimit;
     /**
-     * 堆栈限制(kb)
+     * 判题信息
      * */
-    private long stackLimit;
+    private String message;
 }

@@ -8,25 +8,18 @@ import com.ningf.ningfoj.judge.codeSandBox.CodeSandBoxFactory;
 import com.ningf.ningfoj.judge.codeSandBox.CodeSandBoxProxy;
 import com.ningf.ningfoj.judge.codeSandBox.model.ExecuteCodeRequest;
 import com.ningf.ningfoj.judge.codeSandBox.model.ExecuteCodeResponse;
-import com.ningf.ningfoj.judge.strategy.DefaultJudgeStrategy;
 import com.ningf.ningfoj.judge.strategy.JudgeContext;
-import com.ningf.ningfoj.judge.strategy.JudgeStrategy;
 import com.ningf.ningfoj.model.dto.question.JudgeCase;
-import com.ningf.ningfoj.model.dto.question.JudgeConfig;
-import com.ningf.ningfoj.model.dto.questionsubmit.JudgeInfo;
+import com.ningf.ningfoj.judge.codeSandBox.model.JudgeInfo;
 import com.ningf.ningfoj.model.entity.Question;
 import com.ningf.ningfoj.model.entity.QuestionSubmit;
-import com.ningf.ningfoj.model.enums.JudgeInfoMessageEnum;
-import com.ningf.ningfoj.model.enums.QuestionSubmitLanguageEnum;
 import com.ningf.ningfoj.model.enums.QuestionSubmitStatusEnum;
-import com.ningf.ningfoj.model.vo.QuestionSubmitVO;
 import com.ningf.ningfoj.service.QuestionService;
 import com.ningf.ningfoj.service.QuestionSubmitService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 

@@ -1,7 +1,7 @@
 package com.ningf.ningfoj.judge.strategy;
 
 import com.ningf.ningfoj.model.dto.question.JudgeCase;
-import com.ningf.ningfoj.model.dto.questionsubmit.JudgeInfo;
+import com.ningf.ningfoj.judge.codeSandBox.model.JudgeInfo;
 import com.ningf.ningfoj.model.entity.Question;
 import com.ningf.ningfoj.model.entity.QuestionSubmit;
 import lombok.Data;

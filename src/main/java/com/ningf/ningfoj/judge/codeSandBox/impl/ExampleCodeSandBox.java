@@ -3,7 +3,7 @@ package com.ningf.ningfoj.judge.codeSandBox.impl;
 import com.ningf.ningfoj.judge.codeSandBox.CodeSandBox;
 import com.ningf.ningfoj.judge.codeSandBox.model.ExecuteCodeRequest;
 import com.ningf.ningfoj.judge.codeSandBox.model.ExecuteCodeResponse;
-import com.ningf.ningfoj.model.dto.questionsubmit.JudgeInfo;
+import com.ningf.ningfoj.judge.codeSandBox.model.JudgeInfo;
 import com.ningf.ningfoj.model.enums.JudgeInfoMessageEnum;
 import com.ningf.ningfoj.model.enums.QuestionSubmitStatusEnum;
 

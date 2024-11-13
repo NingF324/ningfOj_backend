@@ -4,7 +4,7 @@ import com.ningf.ningfoj.judge.strategy.DefaultJudgeStrategy;
 import com.ningf.ningfoj.judge.strategy.JavaLanguageJudgeStrategy;
 import com.ningf.ningfoj.judge.strategy.JudgeContext;
 import com.ningf.ningfoj.judge.strategy.JudgeStrategy;
-import com.ningf.ningfoj.model.dto.questionsubmit.JudgeInfo;
+import com.ningf.ningfoj.judge.codeSandBox.model.JudgeInfo;
 import com.ningf.ningfoj.model.entity.QuestionSubmit;
 import org.springframework.stereotype.Service;
 

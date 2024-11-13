@@ -1,17 +1,12 @@
 package com.ningf.ningfoj.model.vo;
 
-import cn.hutool.json.JSON;
 import cn.hutool.json.JSONUtil;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.ningf.ningfoj.model.dto.question.JudgeConfig;
-import com.ningf.ningfoj.model.dto.questionsubmit.JudgeInfo;
-import com.ningf.ningfoj.model.entity.Question;
+import com.ningf.ningfoj.judge.codeSandBox.model.JudgeInfo;
 import com.ningf.ningfoj.model.entity.QuestionSubmit;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
 
 import java.util.Date;
-import java.util.List;
 
 /**
  * @description:

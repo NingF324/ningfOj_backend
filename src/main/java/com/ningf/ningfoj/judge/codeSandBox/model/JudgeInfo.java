@@ -1,4 +1,4 @@
-package com.ningf.ningfoj.model.dto.questionsubmit;
+package com.ningf.ningfoj.judge.codeSandBox.model;
 
 import lombok.Data;
 

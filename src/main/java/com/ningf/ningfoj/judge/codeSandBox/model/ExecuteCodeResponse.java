@@ -1,7 +1,5 @@
 package com.ningf.ningfoj.judge.codeSandBox.model;
 
-import com.ningf.ningfoj.model.dto.question.JudgeConfig;
-import com.ningf.ningfoj.model.dto.questionsubmit.JudgeInfo;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

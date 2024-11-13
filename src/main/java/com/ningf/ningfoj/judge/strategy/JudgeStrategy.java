@@ -1,6 +1,6 @@
 package com.ningf.ningfoj.judge.strategy;
 
-import com.ningf.ningfoj.model.dto.questionsubmit.JudgeInfo;
+import com.ningf.ningfoj.judge.codeSandBox.model.JudgeInfo;
 
 public interface JudgeStrategy {
     /**

@@ -8,6 +8,7 @@ import com.ningf.ningfoj.model.entity.Question;
 import com.ningf.ningfoj.model.enums.JudgeInfoMessageEnum;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @description:
@@ -18,8 +19,8 @@ public class JavaLanguageJudgeStrategy implements JudgeStrategy {
     @Override
     public JudgeInfo doJudge(JudgeContext judgeContext) {
         JudgeInfo judgeInfo = judgeContext.getJudgeInfo();
-        long timeLimit = judgeInfo.getTimeLimit();
-        long memoryLimit = judgeInfo.getMemoryLimit();
+        long timeLimit = Optional.ofNullable(judgeInfo.getTimeLimit()).orElse(0L);
+        long memoryLimit = Optional.ofNullable(judgeInfo.getMemoryLimit()).orElse(0L);
         List<String> inputList = judgeContext.getInputList();
         List<String> outputList = judgeContext.getOutputList();
         Question question = judgeContext.getQuestion();

@@ -13,6 +13,7 @@ import com.ningf.ningfoj.model.entity.User;
 import com.ningf.ningfoj.model.vo.QuestionSubmitVO;
 import com.ningf.ningfoj.service.QuestionSubmitService;
 import com.ningf.ningfoj.service.UserService;
+import io.swagger.models.auth.In;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -28,24 +29,25 @@ import javax.servlet.http.HttpServletRequest;
  * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
  * @from <a href="https://yupi.icu">编程导航知识星球</a>
  */
-@RestController
+/*@RestController
 @RequestMapping("/question_submit")
 @Slf4j
+@Deprecated*/
 public class QuestionSubmitController {
-
+/*
     @Resource
     private QuestionSubmitService questionSubmitService;
 
     @Resource
     private UserService userService;
 
-    /**
+    *//**
      * 提交 / 取消提交
      *
      * @param questionSubmitAddRequest
      * @param request
      * @return 提交记录的id
-     */
+     *//*
     @PostMapping("/")
     public BaseResponse<Long> doQuestionSubmit(@RequestBody QuestionSubmitAddRequest questionSubmitAddRequest,
                                                HttpServletRequest request) {
@@ -58,13 +60,13 @@ public class QuestionSubmitController {
         return ResultUtils.success(questionSubmitId);
     }
 
-    /**
+    *//**
      * 分页获取题目提交信息列表（仅管理员与答题者可见答案，其余用户只能看到是否通过）
      *
      * @param questionSubmitQueryRequest
      * @param request
      * @return
-     */
+     *//*
     @PostMapping("/list/question")
     public BaseResponse<Page<QuestionSubmitVO>> listQuestionSubmitByPage(@RequestBody QuestionSubmitQueryRequest questionSubmitQueryRequest,
                                                                          HttpServletRequest request) {
@@ -76,5 +78,5 @@ public class QuestionSubmitController {
         final User loginUser = userService.getLoginUser(request);
         //返回脱敏信息
         return ResultUtils.success(questionSubmitService.getQuestionSubmitVOPage(questionSubmitPage,loginUser));
-    }
+    }*/
 }

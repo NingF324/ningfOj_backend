@@ -53,7 +53,13 @@ class CodeSandBoxTest {
     void executeCodeProxy() {
         CodeSandBox codeSandBox = CodeSandBoxFactory.newInstance(type);
         codeSandBox = new CodeSandBoxProxy(codeSandBox);
-        String code = "int main() {}";
+        String code = "    public class Main {\n" +
+                "        public static void main(String[] args) {\n" +
+                "            int a =Integer.parseInt(args[0]);\n" +
+                "            int b =Integer.parseInt(args[1]);\n" +
+                "            System.out.println(\"结果为:\"+(a+b));\n" +
+                "        }\n" +
+                "    }";
         String language = QuestionSubmitLanguageEnum.JAVA.getValue();
         List<String> inputList = Arrays.asList("1 2", "3 4");
         ExecuteCodeRequest executeCodeRequest = ExecuteCodeRequest.builder()

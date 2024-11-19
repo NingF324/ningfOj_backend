@@ -103,4 +103,4 @@ knife4j:
           - com.ningf.ningfoj.controller
 #代码沙箱配置
 codeSandBox:
-  type: example
+  type: remote
